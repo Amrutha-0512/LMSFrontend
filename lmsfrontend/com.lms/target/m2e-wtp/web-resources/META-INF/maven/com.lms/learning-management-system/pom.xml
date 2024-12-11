@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Group ID representing the organization/domain -->
+    <groupId>com.lms</groupId>
+
+    <!-- Artifact ID representing the project -->
+    <artifactId>learning-management-system</artifactId>
+
+    <!-- Project version -->
+    <version>0.0.1-SNAPSHOT</version>
+
+    <!-- Packaging type (WAR for web applications) -->
+    <packaging>war</packaging>
+
+    <!-- Project name -->
+    <name>Learning Management System</name>
+
+    <!-- Project URL -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <!-- Encoding and Java version for compiling -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- JUnit dependency for testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Build configuration -->
+    <build>
+        <!-- Final name of the generated WAR file -->
+        <finalName>learning-management-system</finalName>
+        
+        <!-- Plugin management for controlling plugin versions -->
+        <pluginManagement>
+            <plugins>
+                <!-- Plugin for cleaning target directories -->
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.4.0</version>
+                </plugin>
+
+                <!-- Plugin for handling resources (copying files) -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.3.1</version>
+                </plugin>
+
+                <!-- Plugin for compiling Java code -->
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                </plugin>
+
+                <!-- Plugin for running tests -->
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.3.0</version>
+                </plugin>
+
+                <!-- Plugin for creating WAR files -->
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.4.0</version>
+                </plugin>
+
+                <!-- Plugin for installing the project to the local repository -->
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>3.1.2</version>
+                </plugin>
+
+                <!-- Plugin for deploying the project -->
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>3.1.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
